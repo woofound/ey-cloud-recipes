@@ -47,9 +47,7 @@ require_recipe "resque"
 # require_recipe "resque-scheduler"
 
 #uncomment to run the redis recipe
-if node[:instance_role] == 'util'
-  require_recipe "redis"
-end
+require_recipe "redis"
 
 #require_recipe "logrotate"
 #
