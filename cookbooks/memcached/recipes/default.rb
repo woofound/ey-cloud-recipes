@@ -65,7 +65,7 @@ if host
       owner "root"
       group "root"
       mode 0755
-      source "memcached.monitrc"
+      source "memcached.monitrc.erb"
       backup false
       action :create
     end
