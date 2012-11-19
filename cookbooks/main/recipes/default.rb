@@ -83,7 +83,7 @@ require_recipe "redis"
 #require_recipe "newrelic_server_monitoring"
 
 #enable Extension modules for a given Postgresql database
-# if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
+if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # Extensions that support both Postgres 9.0 and 9.1
   # postgresql9_autoexplain "dbname"
   # postgresql9_btree_gin "dbname"
@@ -96,7 +96,7 @@ require_recipe "redis"
   # postgresql9_dict_xsyn "dbname"
   # postgresql9_earthdistance "dbname"
   # postgresql9_fuzzystrmatch "dbname"
-  # postgresql9_hstore "dbname"
+  postgresql9_hstore "core"
   # postgresql9_intarray "dbname"
   # postgresql9_isn "dbname"
   # postgresql9_lo "dbname"
@@ -112,7 +112,6 @@ require_recipe "redis"
   # postgresql9_unaccent "dbname"
   # postgresql9_uuid_ossp "dbname"
 
-
   # 9.1 Extensions
   # postgresql9_file_fdw "dbname"
   # postgresql9_xml2 "dbname"
@@ -121,5 +120,4 @@ require_recipe "redis"
   # postgresql9_pg_buffercache "postgres"
   # postgresql9_pg_freespacemap "postgres"
   # postgresql9_pg_stat_statements "todo" - Not done
-
-# end
+end
