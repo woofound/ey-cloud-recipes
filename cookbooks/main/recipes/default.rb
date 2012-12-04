@@ -97,6 +97,7 @@ if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # postgresql9_earthdistance "dbname"
   # postgresql9_fuzzystrmatch "dbname"
   postgresql9_hstore "core"
+  postgresql9_hstore "template1"
   # postgresql9_intarray "dbname"
   # postgresql9_isn "dbname"
   # postgresql9_lo "dbname"
@@ -110,7 +111,8 @@ if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
   # postgresql9_tablefunc "dbname"
   # postgresql9_test_parser "dbname"
   # postgresql9_unaccent "dbname"
-  # postgresql9_uuid_ossp "dbname"
+  postgresql9_uuid_ossp "core"
+  postgresql9_uuid_ossp "template1"
 
   # 9.1 Extensions
   # postgresql9_file_fdw "dbname"
